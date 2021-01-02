@@ -50,3 +50,22 @@ li.nav-item a{
 .readmore-btn {
   text-align: right !important;
 }
+
+
+
+.image-holder{
+    width: 500px;
+    float:left;
+    margin-right: 20px;
+}
+
+.image-holder img{
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .image-holder:last-child{
+        display: none !important;
+    }
+}
