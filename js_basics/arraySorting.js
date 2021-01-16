@@ -52,7 +52,7 @@ var mars = [
   { type: "Aston", year: 1996 },
 ];
 
-var objSortByYearReverse = cars.sort((a, b) => (a.year > b.year ? -1 : 1));
+const objSortByYearReverse = cars.sort((a, b) => (a.year > b.year ? -1 : 1));
 
 console.log(objSortByYearReverse);
 
