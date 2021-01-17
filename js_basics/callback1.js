@@ -25,4 +25,4 @@ let obj = {
   },
 };
 
-console.log(obj.someMethod(4, 4));
+console.log(`${obj.first} ${obj.someMethod(4, 4)}`);
