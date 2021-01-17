@@ -1,35 +1,67 @@
 <style>
-    #screen {
-        width: 33vw;
-        height: 300px;
-        background: black;
-    }
+        body{
+            margin:0;
+            padding: 0;
 
-   #s1 {
-        background: blue;
-    }
-
-    #s2 {
-        background: rgb(128, 98, 16);
-    }
-
-    #s3 {
-        background: blue;
-    }
+            /* overflow: hidden; */
+        }
+        .wrapper{
+            width: 100%;
+            /* overflow: hidden; */
+           
+        }
+        .control{
+            position: fixed;
+            bottom: 0;
+        }
+        .screen{
+            width: 100vw;
+            height: 300px !important;
+            /* display: inline-block; */
+            position: absolute;
+            font-size: 50px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+    
+        .s1 {
+            background: blue;
+            
+        }
+    
+        .s2 {
+            background: rgb(16, 182, 5);
+            left: 100vw;
+        }
+    
+        .s3 {
+            left: 200vw;
+            background: rgb(243, 0, 0);
+        }
 </style>
+<div class="wrapper">
+    <div class="screen s1" >slide 1</div>
+    <div class="screen s2">slide 2</div>
+    <div class="screen s3">slide 3</div>
 
-    <div id="screen s1"></div>
-    <div id="screen s2"></div>
-    <div id="screen s3"></div>
+</div>
 
+<div class="control">
 
+    <button onclick="right()">left</button>
+    <button onclick="left()">Right</button>
+</div>
 
-<button onclick="sum()">left</button>
-<button onclick="sum()">Right</button>
 
 <script>
-    const sum = () => {
-        console.log("something");
+    const right = () => {
+        console.log("right");
+    };
+    const left = () => {
+        console.log("left");
     };
 
-</script>
+</script> 

@@ -1,6 +1,5 @@
 // IGNORE FOR NOW *************************
 
-
 // var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
 // let num = 0;
 // var text = "";
@@ -24,9 +23,9 @@ let k = 0;
 //   j--;
 // } while (j > 0);
 
-for (k = 0; k < 10; k++) {
-  if (k === 4) {
-    break;
-  }
-  console.log((text2 += k));
+for (let k = 0; k < 5; k + 2) {
+  // if (k === 4) {
+  //   break;
+  // }
+  console.log(k);
 }
