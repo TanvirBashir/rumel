@@ -1,13 +1,10 @@
-let parent = (a, b, c, child) => {
-  console.log(`${a} ${b} ${c} `);
-  child(a, b, c);
+let parent = (a, b, sum, child) => {
+  console.log(`${a} ${b} in parent`);
+  sum = a + b;
+  child(sum);
 };
-let child = (a, b, grandChild) => {
-  console.log(`${a} ${b}`);
-  grandChild(a, b);
-};
-let grandChild = (a, b) => {
-  console.log(`${a} ${b}`);
+let child = (sum) => {
+  console.log(`${sum} in child`);
 };
 
-parent(1, 2, 4, child);
+parent(1, 3, child(2));
