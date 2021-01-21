@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <head>
+        <title>Document</title>
+        
+    </head> -->
+    <body>
+        <!-- manupilating elements using selector -->
+        <h1>Just an element</h1>
+        <h1 id="blue">Element with id "blue"</h1>
+        <h1 class="red">Element with class "red"</h1>
+
+        <!-- manupilating using attributes -->
+        <input type="text" name="firstname" placeholder="your first name">
+        <input type="text" name="lastname" placeholder="your last name">
+        <input type="email" name="email" placeholder="your email">
+        
+        
+        <!-- manupilating element using events -->
+        <h2 onclick="someOnClick()"> Onclick Event</h2>
+        <h2 onmousedown="someOnMouseDown()">Mouse Down Event</h2>
+        <h2 onmouseover="someOnMouseOver()">Mouse Over Event</h2>
+        <button onscroll="someOnScroll()">On Scroll Event</button>
+    </body>
+</html>
+
+<script>
+ 
+    // select html element by its ID.
+    document.getElementById('blue').innerHTML = "Color Blue";
+
+    // selecting element by class name
+    document.getElementsByClassName('red').innerHTML = "color red";
+
+    // selecting element by tag name
+    // Selecting element by attributes
+    let elementStyle = document.getElementsByTagName('h2')[0].style
+    let element = document.getElementsByTagName('h2')[0]
+
+    elementStyle.color = "blue";
+    elementStyle.backgroundColor = "yellow";
+    element.innerHTML = "Black"
+    // triggering events
+
+    function colorChange() {
+        elementStyle.color = "red";
+ 
+    }
+
+  
+</script>
