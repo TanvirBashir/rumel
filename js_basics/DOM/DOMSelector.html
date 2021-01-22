@@ -1,15 +1,9 @@
 <style>
-    h1{
-        color: green
+    .red-text {
+        color: red;
+        background: yellow;
+        font-size: 30px;
     }
-    #blue {
-        color: blue;
-    }
-    .red {
-        color: red
-    }
-
-
 </style>
 
 <!-- selecting elements using tag name, class name and id -->
@@ -19,12 +13,14 @@
 <h1 class="red">element with same class</h1>
 
 
-
 <script>
     // selecting element using ID, selects only one element with the specific ID
     document.getElementById("blue").innerHTML = "Blue Text"
     // // selecting element using tag name, it selects all elements with same tag name
     document.getElementsByTagName("h1")[0].innerHTML = "Green Text"
+    document.getElementsByTagName("h1")[0].setAttribute("class", "red-text")
+
+    document.getElementsByTagName("h1")[0].setAttribute("id", "para-1");
     // // selecting element using class, it selects all elements with same class name
     document.getElementsByClassName("red")[0].innerHTML = "Red Text"
 
