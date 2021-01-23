@@ -1,0 +1,29 @@
+<!-- selecting elements using tag name, class name and id -->
+<h1>Just an element</h1>
+<h1 id="blue">Element with id "blue"</h1>
+<h1 id="orange">Element with id "blue"</h1>
+<h1 class="red">Element with class "red"</h1>
+<h1 class="red second">element with same class</h1>
+<h1 class="red third">element with same class</h1>
+
+<button onclick="update()">Update texts</button>
+
+<script>
+  // // selecting element using ID, selects only one element with the specific ID
+  document.getElementById("blue").style.background = "blue";
+
+  // // selecting element using QUERY SELECTOR, it selects first element of targeted query
+  document.querySelector("#orange").style.background = "orange";
+
+  // // selecting element using tag name, it selects all elements with same tag name as an array,
+  document.getElementsByTagName("h1")[0].style.background = "red";
+
+  // // selecting element using QUERY SELECTOR all, it selects all element of targeted query
+  document.querySelectorAll(".red")[2].style.background = "yellow";
+
+  let elem = document.querySelectorAll(".red");
+
+  function update() {
+    [...elem].map((x) => (x.innerHTML = "updated"));
+  }
+</script>

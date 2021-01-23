@@ -1,0 +1,41 @@
+<script src="jqueryimport.js"></script>
+<style>
+  .box {
+    width: 200px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .fake-image {
+    background: violet;
+    width: 200px;
+    height: 150px;
+  }
+</style>
+<!-- selecting direct DOM elements -->
+<h1>Just an element</h1>
+<h1 id="blue">Element with id "blue"</h1>
+<h1 class="red">Element with class "red"</h1>
+<h1 class="red second">element with same class</h1>
+
+<!-- selecting nested DOM elements -->
+
+<div class="box">
+  <div class="fake-image"></div>
+  <div class="box-item">The box title</div>
+  <div class="box-item">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia iure commodi
+    corporis quod a at ad necessitatibus eaque? Aliquam culpa dolor facere vel
+    fugit sint deleniti ipsum ullam in? Blanditiis?
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("h1").css("background-color", "yellow");
+    $("#blue").css("background-color", "blue");
+    $(".red").css("background-color", "red");
+    $(".red:eq(1)").css("background-color", "green");
+    $(".red:eq(1)").css("background-color", "green");
+  });
+</script>
