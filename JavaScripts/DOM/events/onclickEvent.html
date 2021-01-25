@@ -1,0 +1,13 @@
+<button
+  onclick="document.getElementsByTagName('button')[0].innerHTML = 'updated'"
+>
+  button 1
+</button>
+<button onclick="updateText()">Button 2</button>
+
+<script>
+  function updateText() {
+    document.getElementsByTagName("button")[1].innerHTML =
+      "updated using function";
+  }
+</script>

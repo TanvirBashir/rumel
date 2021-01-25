@@ -1,12 +1,14 @@
 <!-- selecting elements using tag name, class name and id -->
 <h1>Just an element</h1>
 <h1 id="blue">Element with id "blue"</h1>
-<h1 id="orange">Element with id "blue"</h1>
+<h1 id="blue">Element with id "blue"</h1>
+<h1 id="orange">Element with id "Orange"</h1>
 <h1 class="red">Element with class "red"</h1>
 <h1 class="red second">element with same class</h1>
 <h1 class="red third">element with same class</h1>
 
-<button onclick="update()">Update texts</button>
+<button onclick="withMap()">Update with map</button>
+<button onclick="withLoop()">update with loop</button>
 
 <script>
   // // selecting element using ID, selects only one element with the specific ID
@@ -21,9 +23,23 @@
   // // selecting element using QUERY SELECTOR all, it selects all element of targeted query
   document.querySelectorAll(".red")[2].style.background = "yellow";
 
+  document.querySelectorAll("#blue").style.background = "yellow";
+
   let elem = document.querySelectorAll(".red");
 
-  function update() {
-    [...elem].map((x) => (x.innerHTML = "updated"));
+  //   let arr = [1, 2, 4, 5];
+
+  //   document.getElementById("blue").innerHTML = arr.map((n) => n * 2);
+  // [...elem].map((x) => (x.style.color = "green"));
+
+  function withMap() {
+    let elem = document.querySelectorAll(".red");
+    [...elem].map((x) => (x.innerHTML = "map"));
+  }
+  function withLoop() {
+    let elem = document.querySelectorAll(".red");
+    for (i = 0; i < elem.length; i++) {
+      elem[i].innerHTML = "loop";
+    }
   }
 </script>

@@ -1,0 +1,15 @@
+<button>Coordinates</button>
+
+<script>
+  let btn = document.getElementsByTagName("button")[0];
+
+  document.body.addEventListener("mousemove", updateCoordinates);
+
+  function updateCoordinates() {
+    btn.innerHTML = `x:${event.clientX} , y:${event.clientY}`;
+  }
+  document.body.addEventListener("click", () => {
+    btn.innerHTML = "Coordinates";
+    document.body.removeEventListener("mousemove", updateCoordinates);
+  });
+</script>
