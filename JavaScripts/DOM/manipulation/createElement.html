@@ -1,0 +1,47 @@
+<body>
+  <ul>
+    <li>List</li>
+    <li>List</li>
+    <li>List</li>
+    <li>List</li>
+    <li>List</li>
+  </ul>
+</body>
+
+<script>
+  let element;
+
+  //  append
+
+  element = document.createElement("button");
+
+  element.innerHTML = "Append";
+
+  document.querySelector("ul").append(element);
+
+  //  appendChild
+
+  element = document.createElement("button");
+
+  element.innerHTML = "Append Child";
+
+  document.querySelector("ul").appendChild(element);
+
+  //  prepend
+
+  element = document.createElement("button");
+
+  element.innerHTML = "Prepend";
+
+  document.querySelector("ul").prepend(element);
+
+  //  insertBefore
+
+  element = document.createElement("button");
+
+  element.innerHTML = "insertBefore";
+
+  document
+    .querySelector("ul")
+    .insertBefore(element, document.querySelectorAll("li")[2]);
+</script>
