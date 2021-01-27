@@ -1,0 +1,14 @@
+<button onclick="interval = setInterval(start, 3)">Start Timer</button>
+
+<button onclick="clearInterval(interval)">Stop timer</button>
+
+<h1></h1>
+<script>
+  i = 0;
+  function start() {
+    if (i <= 100) {
+      console.log(i);
+      document.querySelector("h1").innerHTML = i++;
+    }
+  }
+</script>

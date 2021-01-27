@@ -12,22 +12,20 @@
     background-color: rgb(254, 255, 188);
   }
 
-  button:nth-child(2n + 1) {
+  /* button:nth-child(2n + 1) {
     background: salmon;
   }
   button:nth-child(2n) {
     background: rgb(229, 243, 152);
-  }
+  } */
 </style>
 <body>
   <ul>
-    Start tag
     <li>List</li>
     <li>List</li>
     <li>List</li>
     <li>List</li>
     <li>List</li>
-    End tag
   </ul>
 </body>
 
@@ -52,11 +50,11 @@
     parentElement[i].append(element);
   }
 
-  [...parentElement].map((x) => {
-    element = document.createElement("button");
-    element.innerHTML = "append map";
-    x.append(element);
-  });
+  // [...parentElement].map((x) => {
+  //   element = document.createElement("button");
+  //   element.innerHTML = "append map";
+  //   x.append(element);
+  // });
 
   //  appendChild ***************************************
 
@@ -66,7 +64,7 @@
   element.innerHTML = "Append Child";
   parentElement.appendChild(element);
 
-  // append multiple element ***************************************
+  // // append multiple element ***************************************
 
   parentElement = document.querySelectorAll("li");
 
@@ -76,11 +74,11 @@
     parentElement[i].appendChild(element);
   }
 
-  [...parentElement].map((x) => {
-    element = document.createElement("button");
-    element.innerHTML = "appendChild map";
-    x.appendChild(element);
-  });
+  // [...parentElement].map((x) => {
+  //   element = document.createElement("button");
+  //   element.innerHTML = "appendChild map";
+  //   x.appendChild(element);
+  // });
   //  prepend ***************************************
 
   parentElement = document.querySelector("ul");
@@ -89,7 +87,7 @@
   element.innerHTML = "Prepend";
   parentElement.prepend(element);
 
-  // prepend multiple element ***************************************
+  // // prepend multiple element ***************************************
 
   parentElement = document.querySelectorAll("li");
 
@@ -99,21 +97,21 @@
     parentElement[i].prepend(element);
   }
 
-  [...parentElement].map((x) => {
-    element = document.createElement("button");
-    element.innerHTML = "prepend map";
-    x.prepend(element);
-  });
+  // [...parentElement].map((x) => {
+  //   element = document.createElement("button");
+  //   element.innerHTML = "prepend map";
+  //   x.prepend(element);
+  // });
 
   //  insertBefore ***************************************
+  parentElement = document.querySelector("ul");
+  childElement = document.querySelectorAll("li");
 
   element = document.createElement("button");
   element.innerHTML = "insertBefore 3rd list";
-  document
-    .querySelector("ul")
-    .insertBefore(element, document.querySelectorAll("li")[2]);
+  parentElement.insertBefore(element, childElement[2]);
 
-  // insertBefore multiple element ***************************************
+  // // insertBefore multiple element ***************************************
 
   parentElement = document.querySelector("ul");
   childElement = document.querySelectorAll("li");
@@ -123,10 +121,4 @@
     element.innerHTML = "insertBefore for";
     parentElement.insertBefore(element, childElement[i]);
   }
-
-  // parentElement.map((x) => {
-  //   element = document.createElement("button");
-  //   element.innerHTML = "insertBefore map";
-  //   x.insertBefore(element, childElement);
-  // });
 </script>
