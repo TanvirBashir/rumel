@@ -1,0 +1,66 @@
+.flex-container {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.flex-box {
+  background-color: rgb(235, 235, 131);
+  display: flex;
+  flex-wrap: wrap;
+  width: 28%;
+  height: 170px;
+  gap: 10px;
+  margin: 20px;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+.vertical {
+  flex-direction: column;
+}
+
+.flex-box .flex-item {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(240, 114, 100);
+}
+.flex-box.align-top-left {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.flex-box.align-top-center {
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex-box.align-top-right {
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.flex-box.align-center-left {
+  align-items: flex-start;
+  justify-content: center;
+}
+.flex-box.align-center-center {
+  align-items: flex-start;
+  justify-content: center;
+}
+.flex-box.align-center-right {
+  align-items: flex-start;
+  justify-content: center;
+}
+.flex-box.align-bottom-left {
+  align-items: flex-start;
+  justify-content: center;
+}
+.flex-box.align-bottom-center {
+  align-items: flex-start;
+  justify-content: middle;
+}
+.flex-box.align-bottom-right {
+  align-items: flex-start;
+  justify-content: middle;
+}
