@@ -1,0 +1,19 @@
+/* Navbar */
+nav {
+  gap: 2px;
+  li {
+    list-style: none;
+    background: rgb(146, 248, 78);
+    padding: 10px 20px;
+    transition: 0.3s;
+    &:hover {
+      background-color: salmon;
+    }
+    a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 1px 1px #fff1f1;
+    }
+  }
+}
