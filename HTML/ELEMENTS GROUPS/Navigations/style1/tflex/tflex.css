@@ -54,28 +54,4 @@ section {
 .flex-col.flex-item.left {
   width: 50%;
 }
-
-/* Navbar */
-nav {
-  gap: 2px;
-}
-
-nav li {
-  list-style: none;
-  background: #92f84e;
-  padding: 10px 20px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-nav li:hover {
-  background-color: salmon;
-}
-
-nav li a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  text-shadow: 1px 1px #fff1f1;
-}
 /*# sourceMappingURL=tflex.css.map */
