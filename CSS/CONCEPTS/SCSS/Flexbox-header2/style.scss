@@ -1,0 +1,77 @@
+// /* Background colors */
+$box-background: white;
+$light: #ffd8c2;
+$dark: #ffa877;
+$overlapper: rgba(162, 22, 22, 0.501);
+$w1: 50%;
+$w2: 50%;
+$w3: 50%;
+
+/* Main Styles */
+.container {
+  background-color: $box-background;
+  // min-height: 300px;
+  max-width: 1100px;
+  margin: auto;
+  text-transform: uppercase;
+  font-family: lato;
+  font-size: 20px;
+}
+section {
+  margin-bottom: 10px;
+}
+
+.flex-row {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+
+  // margin-bottom: 10px;
+}
+.flex-col {
+  background-color: $box-background;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  // padding: 10px;
+}
+.flex-item {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100px;
+  // height: 100%;
+  background: orange;
+  // margin: 10px;
+}
+
+.flex-col.flex-item.right,
+.flex-col.flex-item.left {
+  width: 50%;
+}
+
+/* Custom header */
+
+header {
+  section {
+    margin-bottom: 0;
+  }
+  .flex-item,
+  .flex-col,
+  .container {
+    background-color: transparent;
+  }
+  .header-top {
+    background-color: #ddd;
+    .flex-row {
+      justify-content: space-between;
+    }
+  }
+  .header-nav {
+    background-color: rgb(185, 185, 185);
+    .flex-col {
+      align-items: flex-end;
+    }
+  }
+}

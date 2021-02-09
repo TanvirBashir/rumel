@@ -4,7 +4,6 @@ nav {
   li {
     list-style: none;
     background: rgb(146, 248, 78);
-
     transition: 0.3s;
     &:hover {
       background-color: salmon;
@@ -16,6 +15,12 @@ nav {
       text-shadow: 1px 1px #fff1f1;
       padding: 10px 20px;
       display: inline-block;
+      &:hover::after {
+        content: "*";
+        border-bottom: 10px solid black;
+        height: 10px;
+        width: 10px;
+      }
     }
   }
 }
