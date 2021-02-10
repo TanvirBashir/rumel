@@ -1,0 +1,228 @@
+// /* Background colors */
+$box-background: white;
+$light: #ffd8c2;
+$dark: #ffa877;
+$overlapper: rgba(162, 22, 22, 0.501);
+$w1: 50%;
+$w2: 50%;
+$w3: 50%;
+
+/* Main Styles */
+.container {
+  // background-color: $box-background;
+  // min-height: 300px;
+  max-width: 1100px;
+  margin: auto;
+  // text-transform: uppercase;
+  font-family: lato;
+  font-size: 20px;
+}
+section {
+  margin-bottom: 10px;
+}
+
+.flex-row {
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+
+  // margin-bottom: 10px;
+}
+.flex-col {
+  background-color: $box-background;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  // padding: 10px;
+}
+.flex-item {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 100px;
+  // height: 100%;
+  background: orange;
+  // margin: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+.flex-col.flex-item.right,
+.flex-col.flex-item.left {
+  width: 50%;
+}
+// footer style 1
+
+footer.s1 section {
+  padding: 20px;
+  &.footer-top {
+    background-color: #ffd8c2;
+    .footer-logo {
+      font-size: 55px;
+      font-weight: 900;
+      color: #e68854;
+    }
+    h4 {
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 5px;
+      a {
+        color: black;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 16px;
+      }
+    }
+  } // footer-top
+  &.footer-bottom {
+    background-color: #cd5e5e;
+    text-align: center;
+    color: white;
+  } // footer-bottom
+  .flex-col {
+    background-color: #ffa877;
+    align-items: flex-start;
+    padding: 30px;
+    &:first-child {
+      align-items: center;
+    }
+  }
+}
+
+// footer style 2
+footer.s2 section {
+  padding: 20px;
+  &.footer-top {
+    background-color: #ffd8c2;
+    .footer-logo {
+      font-size: 55px;
+      font-weight: 900;
+      color: #e68854;
+    }
+    h4 {
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 5px;
+      a {
+        color: black;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 16px;
+      }
+    }
+  } // footer-top
+  &.footer-bottom {
+    background-color: #cd5e5e;
+    text-align: center;
+    color: white;
+  } // footer-bottom
+  .flex-col {
+    background-color: #ffa877;
+    align-items: flex-start;
+    padding: 30px;
+    justify-content: flex-start;
+    &:first-child {
+      align-items: center;
+    }
+    .social-icon {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      h4 {
+        margin: 0;
+      }
+      i {
+        font-size: 30px;
+        color: white;
+        border: 5px solid black;
+        border-radius: 50%;
+      }
+      a.button {
+        color: black;
+        background-color: #ffd376;
+        padding: 10px 30px;
+      }
+    }
+  }
+}
+// footer style 3
+footer.s3 section {
+  padding: 20px;
+  &.footer-top {
+    background-color: #ffd8c2;
+    .footer-logo {
+      font-size: 55px;
+      font-weight: 900;
+      color: #e68854;
+    }
+    h4 {
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 5px;
+      a {
+        color: black;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 16px;
+      }
+    }
+  } // footer-top
+  &.footer-bottom {
+    background-color: #cd5e5e;
+    text-align: center;
+    color: white;
+  } // footer-bottom
+  .flex-col {
+    background-color: #ffa877;
+    align-items: flex-start;
+    padding: 30px;
+    justify-content: flex-start;
+    &:first-child {
+      align-items: center;
+      i {
+        font-size: 30px;
+        color: white;
+        border: 5px solid black;
+        border-radius: 50%;
+      }
+    }
+    .subscribe-box {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      h4 {
+        margin: 0;
+      }
+
+      a.button {
+        color: black;
+        background-color: #ffd376;
+        padding: 10px 30px;
+      }
+      input {
+        padding: 10px;
+        border-radius: 5px;
+        &::placeholder {
+          // color: black;
+        }
+      }
+    }
+  }
+}

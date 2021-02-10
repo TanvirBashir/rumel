@@ -1,0 +1,123 @@
+/* Main Styles */
+.container {
+  background-color: white;
+  max-width: 1100px;
+  margin: auto;
+  font-family: lato;
+  font-size: 20px;
+}
+
+section {
+  margin-bottom: 10px;
+}
+
+.flex-row {
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.flex-col {
+  background-color: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-item {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100px;
+}
+
+.flex-col.flex-item.right,
+.flex-col.flex-item.left {
+  width: 50%;
+}
+
+.button {
+  border: 2px solid;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+  color: white;
+}
+
+.fullscreen {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gallery-item {
+  padding: 10px;
+  text-align: center;
+  gap: 10px;
+}
+
+.gallery-item h1,
+.gallery-item h2,
+.gallery-item h3,
+.gallery-item h4,
+.gallery-item h5,
+.gallery-item h6,
+.gallery-item p {
+  margin: 0;
+}
+
+.gallery-item .featured-image {
+  width: 100%;
+  height: auto;
+  border: 5px solid;
+}
+
+.gallery-item h3 {
+  font-size: 25px;
+}
+
+.gallery-item p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.gallery-item p.name {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.gallery-item p .title {
+  font-size: 16px;
+  opacity: 0.5;
+}
+/*# sourceMappingURL=style.css.map */
