@@ -1,0 +1,194 @@
+/* global Styles */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  max-width: 1100px;
+  margin: auto;
+  font-family: lato;
+  font-size: 20px;
+}
+
+section {
+  margin-bottom: 10px;
+}
+
+.flex-row {
+  gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.flex-col {
+  background-color: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-item {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100px;
+}
+
+.flex-col.flex-item.right,
+.flex-col.flex-item.left {
+  width: 50%;
+}
+
+.button {
+  border: 2px solid;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gray;
+  color: white;
+}
+
+.fullscreen {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.future-imp li {
+  list-style: none;
+}
+
+body.future-imp a {
+  text-decoration: none;
+  color: black;
+}
+
+body.future-imp a:hover {
+  opacity: 0.5;
+}
+
+body.future-imp h1,
+body.future-imp h2,
+body.future-imp h3,
+body.future-imp h4,
+body.future-imp h5,
+body.future-imp h6,
+body.future-imp p {
+  margin: 0;
+}
+
+body.future-imp .featured-image {
+  width: 100%;
+  height: auto;
+  border: 5px solid;
+}
+
+body.future-imp h3 {
+  font-size: 25px;
+}
+
+body.future-imp p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body.future-imp p.name {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+body.future-imp p .title {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+body.future-imp header {
+  border-bottom: 1px solid #dddddd;
+}
+
+body.future-imp header .header-row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+body.future-imp header .header-row .flex-col {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body.future-imp header .site-logo {
+  margin-right: 20px;
+  padding: 20px;
+  border-right: 1px solid #dddddd;
+}
+
+body.future-imp header .site-logo a {
+  display: inline-block;
+}
+
+body.future-imp header .left-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body.future-imp header .left-group nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+}
+
+body.future-imp header .left-group nav li {
+  border-right: 1px solid #dddddd;
+}
+
+body.future-imp header .left-group nav a {
+  padding-right: 15px;
+}
+
+body.future-imp header .right-group a {
+  padding: 20px;
+  display: inline-block;
+}
+
+body.future-imp header .right-group a:first-child {
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+/*# sourceMappingURL=style.css.map */
