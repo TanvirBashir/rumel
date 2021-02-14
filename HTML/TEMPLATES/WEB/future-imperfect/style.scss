@@ -1,85 +1,95 @@
-// /* Background colors */
-$box-background: white;
-$light: #ffd8c2;
-$dark: #ffa877;
-$overlapper: rgba(162, 22, 22, 0.501);
-$w1: 50%;
-$w2: 50%;
-$w3: 50%;
-$gb: 1px solid rgb(221, 221, 221);
+$bodyFont: "Raleway", sans-serif;
+$headingFont: "Source Sans Pro", Helvetica, sans-serif;
+$border: 1px solid rgb(212, 212, 212);
+$darkColor: #3c3b3b;
+// Site styles
 
-/* global Styles */
+@mixin thin {
+  font-family: $bodyFont;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  line-height: 2.5;
+}
+
+@mixin fat {
+  font-family: $headingFont;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.65;
+}
+@mixin smallpic {
+  width: 40px;
+  border-radius: 50%;
+}
+
+@mixin gap {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+@mixin box {
+  background-color: white;
+  border: $border;
+}
 body {
   padding: 0;
   margin: 0;
-}
-.container {
-  background-color: $box-background;
-  // min-height: 300px;
-  max-width: 1100px;
-  margin: auto;
-  // text-transform: uppercase;
-  font-family: lato;
-  font-size: 20px;
-}
-section {
-  margin-bottom: 10px;
-}
-
-.flex-row {
-  gap: 10px;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 10px;
-  // margin-bottom: 10px;
-}
-.flex-col {
-  background-color: $box-background;
-  width: 100%;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  // padding: 10px;
-}
-.flex-item {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  min-height: 100px;
-  // height: 100%;
-  // background: orange;
-  // margin: 10px;
-}
-
-.flex-col.flex-item.right,
-.flex-col.flex-item.left {
-  width: 50%;
-}
-.button {
-  border: 2px solid;
-  padding: 10px 20px;
-  cursor: pointer;
-  &:hover {
-    background-color: gray;
-    color: white;
+  font-family: $bodyFont;
+  color: $darkColor;
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: lato;
+    font-size: 20px;
   }
-}
-.fullscreen {
-  height: 100vh;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
+  section {
+    margin-bottom: 10px;
+  }
 
-body.future-imp {
+  .flex-row {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+  .flex-col {
+    width: 100%;
+    @include gap;
+  }
+  .flex-item {
+    // justify-content: center;
+    align-items: flex-start;
+    @include gap;
+    min-height: 100px;
+  }
+
+  .flex-col.flex-item.right,
+  .flex-col.flex-item.left {
+    width: 50%;
+  }
+  .button {
+    border: 2px solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: gray;
+      color: white;
+    }
+  }
+  .fullscreen {
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
   li {
     list-style: none;
   }
 
   a {
     text-decoration: none;
-    color: black;
+    color: rgb(179, 22, 22);
   }
   a:hover {
     opacity: 0.5;
@@ -92,7 +102,12 @@ body.future-imp {
   h6,
   p {
     margin: 0;
-  } // global properties
+  }
+}
+
+body.future-imp {
+  // global properties
+  font-size: 16px;
 
   .featured-image {
     width: 100%;
@@ -115,14 +130,19 @@ body.future-imp {
       opacity: 0.5;
     }
   }
-
-  .button {
+  .hr {
+    border-bottom: $border;
+    width: 100%;
+    margin: 40px 0;
   }
+  // .button {
+  // }
 
-  // site design
+  /* Header Section */
   header {
-    // padding: 0 30px;
-    border-bottom: $gb;
+    border-bottom: $border;
+    font-family: $headingFont;
+    letter-spacing: 0.25em;
     .header-row {
       justify-content: space-between;
       margin: 0;
@@ -130,25 +150,33 @@ body.future-imp {
         align-items: center;
       }
     }
-    .site-logo {
-      margin-right: 20px;
-      padding: 20px;
-      border-right: $gb;
-      a {
-        display: inline-block;
-      }
-    }
+
     .left-group {
       display: flex;
+      font-size: 0.7em;
+      text-transform: uppercase;
+      .site-logo {
+        margin-right: 20px;
+        padding: 20px;
+        justify-content: center;
+        border-right: $border;
+        a {
+          display: inline-block;
+          letter-spacing: 4px;
+          font-weight: 800;
+        }
+      }
       nav {
         flex-direction: row;
         gap: 20px;
         li {
-          border-right: $gb;
+          border-right: $border;
         }
         a {
-          // background-color: orange;
           padding-right: 15px;
+          font-weight: 300;
+          font-family: $headingFont;
+          color: #646464;
         }
       }
     }
@@ -157,10 +185,95 @@ body.future-imp {
         padding: 20px;
         display: inline-block;
         &:first-child {
-          border-right: $gb;
-          border-left: $gb;
+          border-right: $border;
+          border-left: $border;
         }
       }
+    }
+  }
+
+  section.page-content {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    .sidebar-col {
+      width: 30%;
+      // background: aqua;
+      .author-info {
+        img {
+          width: 70px;
+        }
+        h2 {
+          @include fat;
+          font-size: 35px;
+        }
+        p {
+          @include thin;
+          font-size: 13px;
+        }
+      } // .author-info
+
+      .post-s1-group {
+        @include gap;
+        gap: 40px;
+      }
+      .post-s1-list {
+        @include box;
+
+        .footer {
+          display: flex;
+          justify-content: space-between;
+          padding: 14px;
+          h3 {
+            @include fat;
+            margin-top: -15px;
+            a {
+              font-size: 11px;
+              color: $darkColor;
+              cursor: pointer;
+            }
+          }
+          p {
+            @include thin;
+            font-size: 10px;
+          }
+          .right {
+            img {
+              @include smallpic;
+            }
+          }
+        }
+      }
+      .post-s2-list {
+        .footer {
+          display: flex;
+          justify-content: space-between;
+          padding: 14px;
+          .left {
+            img {
+              @include smallpic;
+            }
+          }
+
+          .right {
+            width: 75%;
+            h3 {
+              @include fat;
+              margin-top: -15px;
+              a {
+                font-size: 11px;
+                color: $darkColor;
+                cursor: pointer;
+              }
+            }
+            p {
+              @include thin;
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+    .content-col {
     }
   }
 }

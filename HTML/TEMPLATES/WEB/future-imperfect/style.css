@@ -1,22 +1,22 @@
-/* global Styles */
 body {
   padding: 0;
   margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: #3c3b3b;
 }
 
-.container {
-  background-color: white;
-  max-width: 1100px;
+body .container {
+  max-width: 1200px;
   margin: auto;
   font-family: lato;
   font-size: 20px;
 }
 
-section {
+body section {
   margin-bottom: 10px;
 }
 
-.flex-row {
+body .flex-row {
   gap: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,49 +28,50 @@ section {
   margin-bottom: 10px;
 }
 
-.flex-col {
-  background-color: white;
+body .flex-col {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.flex-item {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body .flex-item {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100px;
 }
 
-.flex-col.flex-item.right,
-.flex-col.flex-item.left {
+body .flex-col.flex-item.right,
+body .flex-col.flex-item.left {
   width: 50%;
 }
 
-.button {
+body .button {
   border: 2px solid;
   padding: 10px 20px;
   cursor: pointer;
 }
 
-.button:hover {
+body .button:hover {
   background-color: gray;
   color: white;
 }
 
-.fullscreen {
+body .fullscreen {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,27 +85,32 @@ section {
           align-items: center;
 }
 
-body.future-imp li {
+body li {
   list-style: none;
 }
 
-body.future-imp a {
+body a {
   text-decoration: none;
-  color: black;
+  color: #b31616;
 }
 
-body.future-imp a:hover {
+body a:hover {
   opacity: 0.5;
 }
 
-body.future-imp h1,
-body.future-imp h2,
-body.future-imp h3,
-body.future-imp h4,
-body.future-imp h5,
-body.future-imp h6,
-body.future-imp p {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
   margin: 0;
+}
+
+body.future-imp {
+  font-size: 16px;
+  /* Header Section */
 }
 
 body.future-imp .featured-image {
@@ -133,8 +139,16 @@ body.future-imp p .title {
   opacity: 0.5;
 }
 
+body.future-imp .hr {
+  border-bottom: 1px solid #d4d4d4;
+  width: 100%;
+  margin: 40px 0;
+}
+
 body.future-imp header {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #d4d4d4;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  letter-spacing: 0.25em;
 }
 
 body.future-imp header .header-row {
@@ -150,20 +164,27 @@ body.future-imp header .header-row .flex-col {
           align-items: center;
 }
 
-body.future-imp header .site-logo {
-  margin-right: 20px;
-  padding: 20px;
-  border-right: 1px solid #dddddd;
-}
-
-body.future-imp header .site-logo a {
-  display: inline-block;
-}
-
 body.future-imp header .left-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+body.future-imp header .left-group .site-logo {
+  margin-right: 20px;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid #d4d4d4;
+}
+
+body.future-imp header .left-group .site-logo a {
+  display: inline-block;
+  letter-spacing: 4px;
+  font-weight: 800;
 }
 
 body.future-imp header .left-group nav {
@@ -175,11 +196,14 @@ body.future-imp header .left-group nav {
 }
 
 body.future-imp header .left-group nav li {
-  border-right: 1px solid #dddddd;
+  border-right: 1px solid #d4d4d4;
 }
 
 body.future-imp header .left-group nav a {
   padding-right: 15px;
+  font-weight: 300;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #646464;
 }
 
 body.future-imp header .right-group a {
@@ -188,7 +212,131 @@ body.future-imp header .right-group a {
 }
 
 body.future-imp header .right-group a:first-child {
-  border-right: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
+  border-right: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+}
+
+body.future-imp section.page-content {
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+}
+
+body.future-imp section.page-content .sidebar-col {
+  width: 30%;
+}
+
+body.future-imp section.page-content .sidebar-col .author-info img {
+  width: 70px;
+}
+
+body.future-imp section.page-content .sidebar-col .author-info h2 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.65;
+  font-size: 35px;
+}
+
+body.future-imp section.page-content .sidebar-col .author-info p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  line-height: 2.5;
+  font-size: 13px;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s1-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s1-list {
+  background-color: white;
+  border: 1px solid #d4d4d4;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s1-list .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s1-list .footer h3 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.65;
+  margin-top: -15px;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s1-list .footer h3 a {
+  font-size: 11px;
+  color: #3c3b3b;
+  cursor: pointer;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s1-list .footer p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  line-height: 2.5;
+  font-size: 10px;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s1-list .footer .right img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s2-list .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s2-list .footer .left img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s2-list .footer .right {
+  width: 75%;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s2-list .footer .right h3 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1.65;
+  margin-top: -15px;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s2-list .footer .right h3 a {
+  font-size: 11px;
+  color: #3c3b3b;
+  cursor: pointer;
+}
+
+body.future-imp section.page-content .sidebar-col .post-s2-list .footer .right p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  line-height: 2.5;
+  font-size: 10px;
 }
 /*# sourceMappingURL=style.css.map */
