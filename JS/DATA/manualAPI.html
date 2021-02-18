@@ -1,0 +1,44 @@
+<ul id="userList">
+  <li id="user"></li>
+</ul>
+<script >
+  const userList = {
+  user: [
+    {
+      id: 1,
+      name: "Franks",
+      age: 22,
+      profession: "Software Engineer",
+      Skill: ["Python", "JS"],
+    },
+    {
+      id: 2,
+      name: "Jack",
+      age: 25,
+      profession: "Ship Manager",
+      Skill: ["Kitchen", "Crew Management"],
+    },
+    {
+      id: 3,
+      name: "Rose",
+      age: 18,
+      profession: "Fashion Designer",
+      Skill: ["Adobe", "Illustrator"],
+    },
+  ],
+};
+
+getUserList();
+
+function getUserList() {
+  listUserNames(userList.user);
+}
+
+function listUserNames(users) {
+  let usersElement = document.getElementById("userList");
+  usersElement.innerHTML = users
+    .map((user) => `<li>${user.name}</li>`)
+    .join("");
+}
+
+</script>
